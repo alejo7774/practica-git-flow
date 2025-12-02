@@ -233,8 +233,29 @@
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        <p>&copy; 2025 Proyecto de Aprendizaje Git</p>
-        <!-- [MEJORA 5]: Aquí irán los enlaces a redes sociales -->
+       <div class="header-container" style="flex-direction: column; gap: 10px;">
+            <p>&copy; 2025 Portafolio Profesional</p>
+            
+            <!-- [MEJORA 5]: Enlaces a Redes Sociales -->
+            <div class="social-links">
+                <style>
+                    /* Estilos para los enlaces sociales */
+                    .social-links a {
+                        color: var(--white);
+                        text-decoration: none;
+                        margin: 0 10px;
+                        font-weight: 600;
+                        transition: color 0.3s ease;
+                    }
+                    .social-links a:hover {
+                        color: var(--accent-color); /* Rojo de acento al pasar el ratón */
+                    }
+                </style>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
     </footer>
 
 </body>
