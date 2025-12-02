@@ -167,7 +167,73 @@
             <p>Este repositorio demuestra el dominio de flujos de trabajo profesionales con Git y GitHub, incluyendo
                 gestión de ramas, Pull Requests y resolución de conflictos.</p>
         </section>
+        <section class="card" style="margin-top: 2rem;">
+            <h2>Habilidades Técnicas Clave</h2>
+            <p>Tabla que resume las áreas de expertise y nivel de dominio.</p>
 
+            <style>
+                /* Estilos locales para la tabla */
+                .data-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 1rem;
+                    font-size: 0.95rem;
+                }
+
+                .data-table th,
+                .data-table td {
+                    border: 1px solid #ddd;
+                    padding: 12px;
+                    text-align: left;
+                }
+
+                .data-table th {
+                    background-color: var(--secondary-color);
+                    color: white;
+                    font-weight: bold;
+                }
+
+                .data-table tr:nth-child(even) {
+                    background-color: var(--light-bg);
+                }
+
+                .data-table tr:hover {
+                    background-color: #f1f1f1;
+                }
+            </style>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Área</th>
+                        <th>Tecnología</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Control de Versiones</td>
+                        <td>Git / GitHub</td>
+                        <td>Avanzado</td>
+                    </tr>
+                    <tr>
+                        <td>Maquetación Web</td>
+                        <td>HTML5 / CSS3</td>
+                        <td>Experto</td>
+                    </tr>
+                    <tr>
+                        <td>Programación Front-end</td>
+                        <td>JavaScript</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Bases de Datos</td>
+                        <td>SQL / Firestore</td>
+                        <td>Básico</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         <div class="content-grid">
             <article class="card">
                 <h2>Sobre el Proyecto</h2>
@@ -233,9 +299,9 @@
 
     <!-- PIE DE PÁGINA -->
     <footer>
-       <div class="header-container" style="flex-direction: column; gap: 10px;">
+        <div class="header-container" style="flex-direction: column; gap: 10px;">
             <p>&copy; 2025 Portafolio Profesional</p>
-            
+
             <!-- [MEJORA 5]: Enlaces a Redes Sociales -->
             <div class="social-links">
                 <style>
@@ -247,8 +313,10 @@
                         font-weight: 600;
                         transition: color 0.3s ease;
                     }
+
                     .social-links a:hover {
-                        color: var(--accent-color); /* Rojo de acento al pasar el ratón */
+                        color: var(--accent-color);
+                        /* Rojo de acento al pasar el ratón */
                     }
                 </style>
                 <a href="#">LinkedIn</a>
