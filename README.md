@@ -22,6 +22,11 @@ El proyecto cuenta con las siguientes características implementadas y funcional
 - **Validación Visual:** Campos estructurados para capturar Nombre, Email y Mensaje de forma clara.  
 - **Diseño Adaptable:** El formulario se ajusta perfectamente a dispositivos móviles y de escritorio.
 
+### 3\. Galería Visual de Proyectos
+
+  * **Imágenes Reales**: Muestra de proyectos anteriores utilizando fotos propias.
+  * **Diseño Responsivo**: Galería adaptable que se visualiza correctamente en cualquier dispositivo.
+  * **Estilo Moderno**: Efectos visuales sutiles para una mejor interacción.
 ---
 
 ## 🛠️ Stack Tecnológico
