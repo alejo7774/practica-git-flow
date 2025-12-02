@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,7 @@
             background-color: var(--primary-color);
             color: var(--white);
             padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .header-container {
@@ -49,9 +50,39 @@
             letter-spacing: 1px;
         }
 
-        /* Espacio reservado para la navegación (Opción 1 del ejercicio) */
+
         nav {
-            /* Aquí implementaremos el menú responsive más adelante */
+            .nav-links {
+                display: flex;
+                gap: 20px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links a {
+                color: var(--white);
+                text-decoration: none;
+                font-weight: 500;
+                position: relative;
+                padding-bottom: 5px;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links a::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: var(--accent-color);
+                transition: width 0.3s ease;
+            }
+
+            .nav-links a:hover::after {
+                width: 100%;
+            }
         }
 
         /* --- Main Content Styles --- */
@@ -59,14 +90,15 @@
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 20px;
-            flex: 1; /* Esto empuja el footer hacia abajo */
+            flex: 1;
+            /* Esto empuja el footer hacia abajo */
         }
 
         .hero-section {
             background-color: var(--white);
             padding: 3rem;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             text-align: center;
             margin-bottom: 2rem;
         }
@@ -86,7 +118,7 @@
             background: var(--white);
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
 
@@ -104,49 +136,21 @@
         }
 
         /* --- Helpers para futuras mejoras --- */
-        .hidden { display: none; }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- ENCABEZADO -->
     <header>
         <div class="header-container">
             <div class="logo">DevProfile Git</div>
-            
-            <!-- [MEJORA 1]: Aquí irá el Menú de Navegación -->
+
+
             <nav>
-                <style>
-                    /* Estilos específicos para el menú (CSS en línea para este ejercicio) */
-                    .nav-links {
-                        display: flex;
-                        gap: 20px;
-                        list-style: none;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    .nav-links a {
-                        color: var(--white);
-                        text-decoration: none;
-                        font-weight: 500;
-                        position: relative;
-                        padding-bottom: 5px;
-                        transition: all 0.3s ease;
-                    }
-                    .nav-links a::after {
-                        content: '';
-                        position: absolute;
-                        width: 0;
-                        height: 2px;
-                        bottom: 0;
-                        left: 0;
-                        background-color: var(--accent-color);
-                        transition: width 0.3s ease;
-                    }
-                    .nav-links a:hover::after {
-                        width: 100%;
-                    }
-                </style>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
@@ -160,17 +164,67 @@
     <main>
         <section class="hero-section">
             <h1>Bienvenido a mi Proyecto de Git</h1>
-            <p>Este repositorio demuestra el dominio de flujos de trabajo profesionales con Git y GitHub, incluyendo gestión de ramas, Pull Requests y resolución de conflictos.</p>
+            <p>Este repositorio demuestra el dominio de flujos de trabajo profesionales con Git y GitHub, incluyendo
+                gestión de ramas, Pull Requests y resolución de conflictos.</p>
         </section>
 
         <div class="content-grid">
             <article class="card">
                 <h2>Sobre el Proyecto</h2>
-                <p>Esta estructura HTML5 servirá de base para implementar funcionalidades progresivas mediante ramas independientes.</p>
+                <p>Esta estructura HTML5 servirá de base para implementar funcionalidades progresivas mediante ramas
+                    independientes.</p>
             </article>
 
             <article class="card">
                 <!-- [MEJORA 2, 3 o 4]: Aquí puedes insertar la tabla, formulario o galería -->
+                <h2>Contáctame</h2>
+                <form action="#" method="POST" style="display: grid; gap: 15px;">
+                    <style>
+                        /* Estilos locales para el formulario */
+                        input,
+                        textarea {
+                            width: 100%;
+                            padding: 10px;
+                            border: 1px solid #ddd;
+                            border-radius: 4px;
+                            font-family: inherit;
+                            box-sizing: border-box;
+                            /* Para que el padding no rompa el ancho */
+                        }
+
+                        button {
+                            background-color: var(--secondary-color);
+                            color: white;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            font-weight: bold;
+                            transition: background 0.3s;
+                        }
+
+                        button:hover {
+                            background-color: var(--primary-color);
+                        }
+                    </style>
+
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
                 <h2>Próxima Funcionalidad</h2>
                 <p>Espacio reservado para la implementación de mejoras (Tabla, Galería o Formulario).</p>
             </article>
@@ -184,4 +238,5 @@
     </footer>
 
 </body>
+
 </html>
