@@ -1,0 +1,16 @@
+Ignorar carpeta de configuración de Visual Studio Code
+
+.vscode/
+
+Ignorar archivos del sistema operativo (Mac/Windows)
+
+.DS_Store
+Thumbs.db
+
+Ignorar logs de errores
+
+*.log
+
+Ignorar carpetas de dependencias (por si usaras Node.js en el futuro)
+
+node_modules/

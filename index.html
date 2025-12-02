@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #ecf0f1;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Header Styles --- */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Espacio reservado para la navegación (Opción 1 del ejercicio) */
+        nav {
+            /* Aquí implementaremos el menú responsive más adelante */
+        }
+
+        /* --- Main Content Styles --- */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            flex: 1; /* Esto empuja el footer hacia abajo */
+        }
+
+        .hero-section {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section h1 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* --- Footer Styles (Opción 5 del ejercicio) --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        /* --- Helpers para futuras mejoras --- */
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="header-container">
+            <div class="logo">DevProfile Git</div>
+            
+            <!-- [MEJORA 1]: Aquí irá el Menú de Navegación -->
+            <nav>
+                <!-- Los enlaces se añadirán en la rama 'feature/menu' -->
+                <p style="font-size: 0.8rem; opacity: 0.7;">(Menú pendiente de implementar)</p>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section class="hero-section">
+            <h1>Bienvenido a mi Proyecto de Git</h1>
+            <p>Este repositorio demuestra el dominio de flujos de trabajo profesionales con Git y GitHub, incluyendo gestión de ramas, Pull Requests y resolución de conflictos.</p>
+        </section>
+
+        <div class="content-grid">
+            <article class="card">
+                <h2>Sobre el Proyecto</h2>
+                <p>Esta estructura HTML5 servirá de base para implementar funcionalidades progresivas mediante ramas independientes.</p>
+            </article>
+
+            <article class="card">
+                <!-- [MEJORA 2, 3 o 4]: Aquí puedes insertar la tabla, formulario o galería -->
+                <h2>Próxima Funcionalidad</h2>
+                <p>Espacio reservado para la implementación de mejoras (Tabla, Galería o Formulario).</p>
+            </article>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 Proyecto de Aprendizaje Git</p>
+        <!-- [MEJORA 5]: Aquí irán los enlaces a redes sociales -->
+    </footer>
+
+</body>
+</html>
